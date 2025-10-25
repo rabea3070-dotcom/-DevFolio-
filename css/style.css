@@ -1,0 +1,368 @@
+/* ===============================
+   🔹 RESET & GLOBAL STYLES
+=============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbar {
+  background-color: transparent !important;
+}
+
+
+/* ===============================
+   🔹 NAVBAR
+=============================== */
+.navbar-nav li a {
+  position: relative;
+}
+
+.navbar-nav li a::after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+}
+
+.navbar-nav li a:hover::after {
+  transform: translateX(-50%) scaleX(1);
+  transition: all 0.3s ease;
+}
+
+.navbar .collapse ul li a.active::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* ===============================
+   🔹 DROPDOWN MENU
+=============================== */
+.dropdown-menu a:hover {
+  /* color: rgb(32, 92, 255); */
+}
+
+.dropdown-menu a:hover::after {
+  display: none;
+}
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: -86%;
+  margin-top: -1px;
+}
+
+.dropdown-submenu > a::after {
+  content: "";
+  float: right;
+  margin-left: 0.5em;
+  font-size: 0.6rem;
+}
+
+/* .dropdown-submenu:active > .dropdown-menu {
+  display: block;
+} */
+.show {
+  display: block;
+}
+/* ===============================
+   🔹 HERO SECTION
+=============================== */
+#home {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6)),
+    url(../images/hero-bg.jpg);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* ===============================
+   🔹 SECTIONS GENERAL
+=============================== */
+section {
+  padding: 50px 0;
+}
+
+section .content {
+  padding: 30px 0;
+}
+
+footer .header h2,
+section .header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+footer .header h2::after,
+section .header h2::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 4px;
+  background-color: rgb(32, 92, 255);
+  left: 50px;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+
+section .paragraph p {
+  margin-top: 20px;
+  color: #777;
+}
+
+/* ===============================
+   🔹 SKILLS SECTION
+=============================== */
+.skills > div {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.skills > div > div {
+  height: 10px;
+  background-color: rgba(32, 91, 255, 0.226);
+  border-radius: 0;
+}
+
+/* ===============================
+   🔹 HEADERS STYLE 2
+=============================== */
+section .header2 p {
+  position: relative;
+}
+
+section .header2 p::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 4px;
+  background-color: rgb(32, 92, 255);
+  left: 50%;
+  bottom: -8px;
+  transform: translateX(-50%);
+}
+
+/* ===============================
+   🔹 SERVICES SECTION
+=============================== */
+#services {
+  background-color: rgb(240, 240, 240);
+}
+
+section .services .service-item div {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 7px solid rgb(32, 92, 255);
+  transition: all 0.3s ease;
+}
+
+section .services .service-item:hover div {
+  background-color: rgb(32, 92, 255);
+  border: 7px solid rgba(255, 255, 255, 0.63);
+}
+
+section .services .service-item:hover div i {
+  color: white;
+  transform: scale(1.2);
+}
+
+/* ===============================
+   🔹 INFO SECTION
+=============================== */
+#info {
+  background-image: linear-gradient(rgba(32, 91, 255, 0.678)),
+    url(./../images/counters-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+}
+
+#info .items .info-item .icon {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: auto;
+  padding: 40px;
+  border: 5px solid rgba(255, 255, 255, 0.589);
+}
+
+/* ===============================
+   🔹 CARD STYLE (PORTFOLIO)
+=============================== */
+.card .img {
+  overflow: hidden;
+}
+
+.card .img img {
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.card:hover img {
+  scale: 1.5;
+}
+
+.card .card-body h5 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.card .card-body p {
+  color: #777;
+  margin-top: 10px;
+}
+
+.card .card-body p span {
+  color: rgb(32, 92, 255);
+}
+
+.card .card-body .btn button {
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid rgb(32, 92, 255);
+  color: rgb(32, 92, 255);
+}
+
+/* ===============================
+   🔹 CLIENTS SECTION
+=============================== */
+#Clients {
+  padding: 100px 0;
+  background-image: linear-gradient(rgba(65, 116, 255, 0.664)),
+    url(../images/overlay-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.carousel-indicators button {
+  width: 15px !important;
+  height: 15px !important;
+  border-radius: 50%;
+  background-color: rgb(32, 92, 255);
+}
+
+.carousel-item .img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: auto;
+}
+
+.carousel-caption {
+  position: static;
+}
+
+.carousel-indicators {
+  bottom: -20px;
+}
+
+a.top-0 {
+  top: -20px !important;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ===============================
+   🔹 FOOTER
+=============================== */
+.footer .footer-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-image: url(./../images/testimonial-2.jpg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+footer {
+  padding: 150px 0 0;
+  background-image: linear-gradient(rgba(32, 91, 255, 0.733)),
+    url(./../images/overlay-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+footer .contact-info .body ul i {
+  color: rgb(32, 91, 255);
+}
+
+footer .contact-info .body .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+footer .contact-info .body .links a {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  color: black;
+  border-radius: 50%;
+  border: 2px solid rgb(32, 91, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+footer .contact-info .body .links a:hover {
+  background-color: rgb(32, 91, 255);
+  color: white;
+  transform: scale(1.1);
+}
+
+footer .contact-info .body .links a i {
+  font-size: 20px;
+}
+
+/* ===============================
+   🔹 COPYRIGHT
+=============================== */
+.copyright {
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.205);
+  background-color: rgb(14, 53, 161);
+  color: white;
+  text-align: center;
+  padding: 20px 0 10px;
+}
+/* .body .blogs .row {
+  flex-wrap: wrap;
+}
+.body .blogs .card {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.205);
+  border: none;
+  transition: all 0.3s ease;
+  max-width: 30%;
+} */
